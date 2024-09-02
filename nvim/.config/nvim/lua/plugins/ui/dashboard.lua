@@ -12,52 +12,52 @@ dashboard.setup({
         winbar = false,
     },
     config = {
-        week_header = {
+        default_header = {
             enable = true,
             append = { '', icons.ui.Circle .. ' Make Cool Stuff ' .. icons.ui.Circle },
         },
         packages = { enable = true },
-        project = { enable = true, limit = 8 },
-        mru = { limit = 8 },
+        project = { enable = false, limit = 8 },
+        mru = { limit = 1 },
         shortcut = {
             {
-                desc = icons.ui.Package .. 'Mason',
+                desc = icons.ui.Package .. 'Eat',
                 group = '@property',
                 action = 'Mason',
-                key = 'm',
+                key = 'E',
             },
             {
-                desc = icons.ui.Sleep .. 'Lazy',
+                desc = icons.ui.Sleep .. 'Sleep',
                 group = '@property',
                 action = 'Lazy',
-                key = 'p',
+                key = 'S',
             },
             {
-                desc = icons.documents.OpenFolder .. 'Files',
+                desc = icons.documents.OpenFolder .. 'Code',
                 group = 'Label',
                 action = 'lua require("telescope").extensions.menufacture.find_files()',
-                key = 'f',
+                key = 'C',
             },
             {
-                desc = icons.ui.Search .. 'Search',
+                desc = icons.ui.Search .. 'Repeat',
                 group = 'Label',
                 action = 'lua require("telescope").extensions.menufacture.live_grep()',
-                key = 'g',
+                key = 'R',
             },
-            {
-                desc = icons.ui.Note .. 'Todo',
-                group = 'Label',
-                action = 'Tdo',
-                key = 'd',
-            },
-            {
-                desc = icons.ui.Power,
-                group = 'Action',
-                action = 'quit',
-                key = 'q',
-            },
+            -- {
+            --     desc = icons.ui.Note .. 'Todo',
+            --     group = 'Label',
+            --     action = 'Tdo',
+            --     key = 'd',
+            -- },
+            -- {
+            --     desc = icons.ui.Power,
+            --     group = 'Action',
+            --     action = 'quit',
+            --     key = 'q',
+            -- },
         },
-        footer = { '', icons.diagnostics.Warning .. 'Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. ' .. icons.diagnostics.Warning },
+        footer = { '','','', icons.diagnostics.Warning .. 'Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. ' .. icons.diagnostics.Warning },
     },
 })
 
