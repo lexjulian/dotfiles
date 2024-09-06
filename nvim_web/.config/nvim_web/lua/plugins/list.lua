@@ -51,14 +51,6 @@ local plugins = {
         cmd = 'Dashboard',
     },
     {
-        'gelguy/wilder.nvim',
-        build = function()
-            vim.cmd([[silent UpdateRemotePlugins]])
-        end,
-        config = load_config('ui.wilder'),
-        keys = { ':', '/', '?' },
-    },
-    {
         'folke/zen-mode.nvim',
         dependencies = {
             'folke/twilight.nvim',
@@ -66,6 +58,22 @@ local plugins = {
         },
         config = load_config('ui.zen-mode'),
         cmd = { 'ZenMode', 'Twilight' },
+    },
+    {
+        'folke/noice.nvim',
+        event = 'VeryLazy',
+        opts = {
+            -- add any options here
+        },
+        dependencies = {
+            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+            'MunifTanjim/nui.nvim',
+            -- OPTIONAL:
+            --   `nvim-notify` is only needed, if you want to use the notification view.
+            --   If not available, we use `mini` as the fallback
+            'rcarriga/nvim-notify',
+        },
+        config = load_config('ui.noice'),
     },
 
     -- Language

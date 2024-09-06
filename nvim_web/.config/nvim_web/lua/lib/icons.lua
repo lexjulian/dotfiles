@@ -6,6 +6,12 @@ return {
         Question = ' ',
         Warning = ' ',
     },
+    dashboard = {
+        Eat = '🥄',
+        Sleep = '󰒲',
+        Code = '',
+        Repeat = '󰑓',
+   },
     documents = {
         File = ' ',
         FileEmpty = ' ',

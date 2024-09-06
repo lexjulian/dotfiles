@@ -21,7 +21,7 @@ dashboard.setup({
         mru = { limit = 1 },
         shortcut = {
             {
-                desc = icons.ui.Package .. 'Eat',
+                desc = icons.dashboard.Eat .. 'Eat',
                 group = '@property',
                 action = 'Mason',
                 key = 'E',
@@ -33,13 +33,13 @@ dashboard.setup({
                 key = 'S',
             },
             {
-                desc = icons.documents.OpenFolder .. 'Code',
+                desc = icons.dashboard.Code .. 'Code',
                 group = 'Label',
                 action = 'lua require("telescope").extensions.menufacture.find_files()',
                 key = 'C',
             },
             {
-                desc = icons.ui.Search .. 'Repeat',
+                desc = icons.dashboard.Repeat .. 'Repeat',
                 group = 'Label',
                 action = 'lua require("telescope").extensions.menufacture.live_grep()',
                 key = 'R',
