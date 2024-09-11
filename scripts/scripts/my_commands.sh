@@ -44,6 +44,7 @@ echo -e "${BLUE}$(printf '%*s' "$total_width" | tr ' ' '-')${NC}"
 # Print the table rows
 print_row "archlinux-java help" "Shows the options for Java."
 print_row "chmod +x 'text.sh'" "Make the script executable for creating your own bash scripts."
+print_row "find . -mindepth 2 -maxdepth 2 -type d -name 'foldername'" "Find specific filename if you are in main folder with subfolders."
 print_row "git add -u" "Delete all deleted files in git."
 print_row "grep -n 'text' 'file'" "Find all the text inside the file and shows the line number."
 print_row "grep -v 'text' 'file'" "Removes all the lines matched with the word and only shows the lines without the word."
