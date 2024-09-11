@@ -118,7 +118,7 @@ local plugins = {
         config = load_config('lang.comment'),
         event = { 'BufReadPre', 'BufNewFile' },
         -- enabled if anything not 0.10
-        enabled = vim.fn.has('nvim-0.10.0') == 0,
+        enabled = vim.fn.has('nvim-0.10.0') == 1,
     },
     {
         'echasnovski/mini.surround',
