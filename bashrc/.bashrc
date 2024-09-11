@@ -10,7 +10,8 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 #custom script
-alias clear='~/scripts/clear_and_fetch.sh'
+#alias clear='~/scripts/clear_and_fetch.sh'
+alias clearfetch='clear && neofetch'
 alias dumbass='~/scripts/my_commands.sh'
 alias web='~/scripts/webdev_commands.sh'
 
