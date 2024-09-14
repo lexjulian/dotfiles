@@ -48,6 +48,7 @@ print_row "find . -mindepth 2 -maxdepth 2 -type d -name 'foldername'" "Find spec
 print_row "git add -u" "Delete all deleted files in git."
 print_row "grep -n 'text' 'file'" "Find all the text inside the file and shows the line number."
 print_row "grep -v 'text' 'file'" "Removes all the lines matched with the word and only shows the lines without the word."
+print_row "ls /var/cache/pacman/pkg/" "List all the cache packages you download for pacman. ${RED}Note:${NC} sudo pacman -Scc to clean it."
 print_row "nmcli device wifi list" "Shows all the list of wifi connection."
 print_row "nmcli device wifi rescan" "Try to rescan just in case the wifi is not showing."
 print_row "nmcli device wifi connect 'SSID' password 'SSIDPASSWORD'" "Insert the necessary information and connect to the desired wifi connection."
@@ -57,6 +58,7 @@ print_row "nmcli radio wifi off/on" "Toggle wifi on/off."
 print_row "systemctl list-units --type=service --state=running" "Shows all the active systemd."
 print_row "xrandr -q" "Shows all info about monitors."
 print_row "xrandr --output HDMI-1 --same-as eDP-1" "Will duplicate your main monitor to your second monitor. ${RED}Note:${NC} If you are using Polybar, the statusbar will be on top of each other. Comment the for loop in .config/polybar/launch_polybar.sh."
+print_row "yay -Scc" "Will clean the yay package cache and AUR."
 
 # Print a separator line at the end
 echo -e "${BLUE}$(printf '%*s' "$total_width" | tr ' ' '-')${NC}"
