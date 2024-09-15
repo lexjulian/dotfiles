@@ -1,6 +1,13 @@
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 
+--allows you to load snippets with html
+luasnip.snippets = {
+    html = {}
+}
+luasnip.snippets.javascriptreact = luasnip.snippets.html
+require('luasnip').filetype_extend("javascriptreact", { "html" })
+require("luasnip/loaders/from_vscode").load({include = {"html"}})
 require('luasnip/loaders/from_vscode').lazy_load()
 
 local icons = require('lib.icons')
