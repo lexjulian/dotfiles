@@ -23,10 +23,23 @@ alias tmux-react='tmux attach-session -t react-directory'
 alias web='~/scripts/webdev_commands.sh'
 
 #functions
+
+#show the most recent edited file in a directory
 rec() {
   local dir="${1:-.}"
   nvim $(find "$dir" -type f -printf "%T+ %p\n" | sort -r | fzf -m --preview='bat --color=always {}' | awk '{print substr($0, index($0,$2))}')
 }
+
+#look for specific word
+fzf-highlight() {
+    local word="$1"
+    if [ -z "$word" ]; then
+        echo "Usage: fzf-highlight WORD"
+        return 1
+    fi
+    find . -type f | fzf --preview "bat --style=plain --color=always {} | grep -n --color=always '$word'" --preview-window=up:80%
+}
+
 
 neofetch
 
