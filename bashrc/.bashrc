@@ -19,6 +19,7 @@ alias dumbass='~/scripts/my_commands.sh'
 alias phoneWIFI='~/scripts/ScrcpyWIFI_GTK.sh'
 alias phoneUSB='~/scripts/scrcpyUSB.sh'
 alias q~='shutdown -h now'
+alias tmux-clear='~/scripts/clear_panes.sh'
 alias tmux-react='tmux attach-session -t react-directory'
 alias web='~/scripts/webdev_commands.sh'
 
