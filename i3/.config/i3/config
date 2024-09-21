@@ -17,7 +17,7 @@ exec --no-startup-id picom
 #set up polybar to show on every monitor
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 #set up the background image for i3
-exec_always feh --bg-scale ~/dotfiles/backgrounds/my-bg-1.jpeg
+exec_always feh --bg-scale ~/dotfiles/backgrounds/my-bg-2.jpeg
 #binding rofi -show combi
 bindsym $mod+space exec rofi -show combi
 #rofi -show drun
