@@ -20,18 +20,18 @@ total_width=$((command_width + description_width + 5)) # Adding 5 for spaces and
 
 # Function to wrap text and align with the description column
 wrap_text() {
-    local text="$1"
-    local width="$2"
-    local padding=$(printf "%-${padding_width}s" "")
-    echo "$text" | fold -s -w "$width" | sed "2,\$s/^/$padding/"
+	local text="$1"
+	local width="$2"
+	local padding=$(printf "%-${padding_width}s" "")
+	echo "$text" | fold -s -w "$width" | sed "2,\$s/^/$padding/"
 }
 
 # Function to print with padding and text wrapping
 print_row() {
-    local command="$1"
-    local description="$2"
-    printf "${GREEN}%-${command_width}s${NC}" "$command"
-    echo -e "${YELLOW}$(wrap_text "$description" "$description_width")${NC}"
+	local command="$1"
+	local description="$2"
+	printf "${GREEN}%-${command_width}s${NC}" "$command"
+	echo -e "${YELLOW}$(wrap_text "$description" "$description_width")${NC}"
 }
 echo -e "\n"
 echo -e "${BLUE}$(printf '%*s' "$total_width" | tr ' ' '-')${NC}"
@@ -57,6 +57,7 @@ print_row "nmcli device wifi connect 'SSID' password 'SSIDPASSWORD'" "Insert the
 print_row "nmcli connection show" "Verify the connection."
 print_row "ps aux | grep 'text'" "Checks all the running programs pipe with grep. ${RED}Note:${NC} You can get the PID in the first set of numbers and ${RED}kill it${NC}."
 print_row "nmcli radio wifi off/on" "Toggle wifi on/off."
+print_row "sudo dmidecode -t 16" "Information about ram maximum capacity. ${RED}Note:${NC} Run sudo pacman -S dmidecode if its not installed"
 print_row "systemctl list-units --type=service --state=running" "Shows all the active systemd."
 print_row "xrandr -q" "Shows all info about monitors."
 print_row "xrandr --output HDMI-1 --same-as eDP-1" "Will duplicate your main monitor to your second monitor. ${RED}Note:${NC} If you are using Polybar, the statusbar will be on top of each other. Comment the for loop in .config/polybar/launch_polybar.sh."
@@ -64,4 +65,3 @@ print_row "yay -Scc" "Will clean the yay package cache and AUR."
 
 # Print a separator line at the end
 echo -e "${BLUE}$(printf '%*s' "$total_width" | tr ' ' '-')${NC}"
-
