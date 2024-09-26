@@ -57,6 +57,7 @@ print_row "nmcli device wifi connect 'SSID' password 'SSIDPASSWORD'" "Insert the
 print_row "nmcli connection show" "Verify the connection."
 print_row "ps aux | grep 'text'" "Checks all the running programs pipe with grep. ${RED}Note:${NC} You can get the PID in the first set of numbers and ${RED}kill it${NC}."
 print_row "nmcli radio wifi off/on" "Toggle wifi on/off."
+print_row "sudo dmidecode -t 17" "Information about ram memory."
 print_row "sudo dmidecode -t 16" "Information about ram maximum capacity. ${RED}Note:${NC} Run sudo pacman -S dmidecode if its not installed"
 print_row "systemctl list-units --type=service --state=running" "Shows all the active systemd."
 print_row "xrandr -q" "Shows all info about monitors."
