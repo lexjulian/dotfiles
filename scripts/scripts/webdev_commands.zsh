@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Define colors
 BOLD='\033[1m'

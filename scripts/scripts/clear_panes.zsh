@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 for pane in $(tmux list-panes -F '#P'); do
   if [ "$pane" -eq 0 ]; then

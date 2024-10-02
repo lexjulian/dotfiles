@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 #  This script connects Linux to Android device over WiFi and mirrors the device's display on the Linux desktop
 #  Version 1.5 GTK

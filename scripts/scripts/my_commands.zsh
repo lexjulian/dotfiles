@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Define colors
 BOLD='\033[1m'
@@ -20,19 +20,20 @@ total_width=$((command_width + description_width + 5)) # Adding 5 for spaces and
 
 # Function to wrap text and align with the description column
 wrap_text() {
-	local text="$1"
-	local width="$2"
-	local padding=$(printf "%-${padding_width}s" "")
-	echo "$text" | fold -s -w "$width" | sed "2,\$s/^/$padding/"
+    local text="$1"
+    local width="$2"
+    local padding=$(printf "%-${padding_width}s" "")
+    echo "$text" | fold -s -w "$width" | sed "2,\$s/^/$padding/"
 }
 
 # Function to print with padding and text wrapping
 print_row() {
-	local command="$1"
-	local description="$2"
-	printf "${GREEN}%-${command_width}s${NC}" "$command"
-	echo -e "${YELLOW}$(wrap_text "$description" "$description_width")${NC}"
+    local command="$1"
+    local description="$2"
+    printf "${GREEN}%-${command_width}s${NC}" "$command"
+    echo -e "${YELLOW}$(wrap_text "$description" "$description_width")${NC}"
 }
+
 echo -e "\n"
 echo -e "${BLUE}$(printf '%*s' "$total_width" | tr ' ' '-')${NC}"
 # Print the table header
@@ -66,3 +67,4 @@ print_row "yay -Scc" "Will clean the yay package cache and AUR."
 
 # Print a separator line at the end
 echo -e "${BLUE}$(printf '%*s' "$total_width" | tr ' ' '-')${NC}"
+
