@@ -1,0 +1,5 @@
+        "custom/github": {
+            "format": " ",
+            "on-click": " brave --app=https://github.com",
+            "tooltip": false
+        },

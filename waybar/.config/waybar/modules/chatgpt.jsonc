@@ -1,0 +1,5 @@
+        "custom/chatgpt": {
+            "format": " {}",
+            "on-click": " brave --app=https://chatgpt.com/",
+            "tooltip": false
+        },
