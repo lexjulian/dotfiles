@@ -3,6 +3,9 @@
   "logo": {
     // "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/pngs/\" -name \"*.png\" | shuf -n 1)",
     // "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/pngs/\" -name \"arch.png\" )",
+    "padding": {
+      "top": 3,
+    },
     "type": "kitty",
     "height": 18,
   },
@@ -10,6 +13,14 @@
     "separator": " : ",
   },
   "modules": [
+    {
+      "type": "custom",
+      "format": "                                                   ",
+    },
+    {
+      "type": "custom",
+      "format": "                                                   ",
+    },
     {
       "type": "custom",
       "format": "\u001b[93m✅ Consistency \u001b[97m doesn’t guarantee \u001b[92m success",
