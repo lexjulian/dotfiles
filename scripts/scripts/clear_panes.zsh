@@ -10,3 +10,4 @@ for pane in $(tmux list-panes -F '#P'); do
   fi
 done
 
+tmux select-pane -t 1
