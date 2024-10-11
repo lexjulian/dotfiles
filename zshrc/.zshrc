@@ -76,6 +76,7 @@ alias cf='clear && fastfetch'
 alias connectPhone='~/scripts/scrcpyUSB.zsh'
 alias dumbass='~/scripts/my_commands.zsh'
 alias tmux-clear='~/scripts/clear_panes.zsh'
+alias yt='~/scripts/yt_download.sh'
 
 # Custom functions
 
@@ -112,6 +113,11 @@ alias .5='cd ../../../../..'
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
+
+# Android Studio
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
