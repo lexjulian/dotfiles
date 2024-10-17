@@ -34,6 +34,7 @@ null_ls.setup({
         -- format.rubocop, -- ruby formatter
         format.shfmt, -- shell formatter
         format.stylua, -- lua formatter
+        -- format.gofmt, -- go formatter
         hover.dictionary, -- show word dictionary on hover
         hover.printenv, -- show env on hover
     },
