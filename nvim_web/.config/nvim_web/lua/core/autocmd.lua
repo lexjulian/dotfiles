@@ -2,6 +2,7 @@ local function augroup(name)
     return vim.api.nvim_create_augroup('nvim2k_' .. name, { clear = true })
 end
 
+
 -- Strip trailing spaces before write
 vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
     group = augroup('strip_space'),
@@ -103,3 +104,4 @@ vim.api.nvim_create_autocmd('FileType', {
         vim.opt_local.formatoptions:remove({ 'c', 'r', 'o' })
     end,
 })
+

@@ -19,6 +19,7 @@ hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
 end)
 
 vim.g.rainbow_delimiters = { highlight = highlight }
+
 require('ibl').setup({
     scope = { highlight = highlight },
     exclude = { filetypes = { 'dashboard', 'toggleterm' } },
