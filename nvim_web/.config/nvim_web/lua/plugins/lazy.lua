@@ -80,7 +80,8 @@ lazy.setup({
     },
 
     diff = { cmd = 'git' },
-    checker = { enabled = true, concurrency = nil, notify = true, frequency = 3600 },
+    -- check for updates
+    checker = { enabled = false, concurrency = nil, notify = true, frequency = 3600 },
     change_detection = { enabled = true, notify = true },
     performance = {
         cache = { enabled = true },

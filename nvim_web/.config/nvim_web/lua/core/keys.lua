@@ -33,11 +33,11 @@ map({ 'n', 'v', 'x' }, 'gl', '$', { desc = 'End of line' })
 map({ 'n', 'v', 'x' }, 'gh', '^', { desc = 'Beginning of line' })
 
 -- Center Cursors
-map('n', 'J', 'mzJ`z', opts)
-map('n', '<C-d>', '<C-d>zz', opts)
-map('n', '<C-u>', '<C-u>zz', opts)
-map('n', 'n', 'nzzzv', opts)
-map('n', 'N', 'Nzzzv', opts)
+-- map('n', 'J', 'mzJ`z', opts)
+-- map('n', '<C-d>', '<C-d>zz', opts)
+-- map('n', '<C-u>', '<C-u>zz', opts)
+-- map('n', 'n', 'nzzzv', opts)
+-- map('n', 'N', 'Nzzzv', opts)
 
 -- Better up/down
 map('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
