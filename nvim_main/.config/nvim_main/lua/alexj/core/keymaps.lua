@@ -19,6 +19,9 @@ keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Moves up and center the screen sim
 keymap.set("n", "n", "nzzzv", { desc = "Move to the next search and centers the screen" })
 keymap.set("n", "N", "Nzzzv", { desc = "Move to the previous search and centers the screen" })
 keymap.set("n", "<leader>ya", ":%y+<CR>", { desc = "Yank the entire contents of the file" })
+keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Previous Buffer" })
+keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+keymap.set("n", "<F2>", "<C-z>", { desc = "Minimize Editor" })
 
 -- insert mode
 keymap.set("i", "jj", "<ESC>", { desc = "Exit insert mode with jj" })
