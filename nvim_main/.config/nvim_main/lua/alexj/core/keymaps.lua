@@ -31,6 +31,9 @@ keymap.set("i", "jj", "<ESC>", { desc = "Exit insert mode with jj" })
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move the selected text up" })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move the selected text down" })
 
+-- terminal mode
+keymap.set("t", "jj", [[<C-\><C-n>]], { desc = "Normal mode in Terminal"})
+
 -- paste mode
 keymap.set("x", "<leader>p", "\"_dP", { desc = "Paste persistent clipboard" })
 
