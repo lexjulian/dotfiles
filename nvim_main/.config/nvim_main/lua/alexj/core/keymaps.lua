@@ -22,6 +22,7 @@ keymap.set("n", "<leader>ya", ":%y+<CR>", { desc = "Yank the entire contents of 
 keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Previous Buffer" })
 keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 keymap.set("n", "<F2>", "<C-z>", { desc = "Minimize Editor" })
+keymap.set("n", "<leader>tt", "<cmd>vsplit | terminal<cr>", { desc = "Open terminal on the left side" })
 
 -- insert mode
 keymap.set("i", "jj", "<ESC>", { desc = "Exit insert mode with jj" })
