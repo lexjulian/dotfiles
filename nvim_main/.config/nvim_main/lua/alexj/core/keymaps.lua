@@ -32,7 +32,7 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move the selected text up" })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move the selected text down" })
 
 -- terminal mode
-keymap.set("t", "jj", [[<C-\><C-n>]], { desc = "Normal mode in Terminal"})
+keymap.set("t", "jj", [[<C-\><C-n>]], { desc = "Normal mode in Terminal" })
 
 -- paste mode
 keymap.set("x", "<leader>p", "\"_dP", { desc = "Paste persistent clipboard" })
@@ -40,3 +40,31 @@ keymap.set("x", "<leader>p", "\"_dP", { desc = "Paste persistent clipboard" })
 -- delete to void
 keymap.set("n", "<leader>d", "\"_d")
 keymap.set("v", "<leader>d", "\"_d")
+
+-- keymaps from plugins
+-- vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+-- vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+-- vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
+-- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+-- vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
+-- vim.keymap.set({ "n", "v" }, "<leader>gf", { desc = "Formats file" }
+-- vim.keymap.set("n", "<leader>e", function() toggle_telescope(harpoon:list()) end,
+--     { desc = "Open harpoon window" })
+-- vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
+-- -- Remove item from the list and close the buffer
+-- vim.keymap.set("n", "<leader>hx", function()
+--     harpoon:list():remove()
+--     vim.cmd("bdelete")
+-- end)
+-- vim.keymap.set("n", "<leader>h1", function() harpoon:list():select(1) end)
+-- vim.keymap.set("n", "<leader>h2", function() harpoon:list():select(2) end)
+-- vim.keymap.set("n", "<leader>h3", function() harpoon:list():select(3) end)
+-- vim.keymap.set("n", "<leader>h4", function() harpoon:list():select(4) end)
+-- vim.keymap.set("n", "<leader>h5", function() harpoon:list():select(5) end)
+-- vim.keymap.set('n', '<leader>fu', vim.cmd.UndotreeToggle)
+-- keymap.set("n", "<leader>fa", builtin.find_files, { desc = "Fuzzy find files in cwd" })
+-- keymap.set("n", "<leader>fs", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { desc = "Fuzzy find in files" })
+-- keymap.set("n", "<leader>ff", builtin.git_files, { desc = "Search in git files" })
+-- keymap.set("n", "<leader>ps", function()
+--     builtin.grep_string({ search = vim.fn.input("Grep > ") })
+-- end)
