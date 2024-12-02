@@ -1,2 +1,3 @@
 0|28|bottom|( cpu memory custom/cpuinfo custom/gpuinfo ) ( idle_inhibitor clock )|( hyprland/workspaces hyprland/window )|( backlight network pulseaudio pulseaudio#microphone custom/updates custom/keybindhint ) ( privacy tray battery ) ( custom/wallchange custom/theme custom/wbar custom/cliphist custom/power )
-1|40|bottom|( hyprland/workspaces  custom/github custom/chatgpt )|( cpu memory )|( pulseaudio pulseaudio#microphone battery  custom/cliphist idle_inhibitor clock )
+0|40|bottom|( hyprland/workspaces  custom/github custom/chatgpt )|( cpu memory )|( pulseaudio pulseaudio#microphone battery  custom/cliphist idle_inhibitor clock )
+1|40|bottom|( hyprland/workspaces )|( cpu memory )|( pulseaudio pulseaudio#microphone battery  custom/cliphist idle_inhibitor clock )
