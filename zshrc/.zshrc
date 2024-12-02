@@ -92,6 +92,29 @@ c_pwd() {
 }
 
 
+# Connect to home server
+ssh!() {
+  local port="$1"
+  local ip_file="${2:-$HOME/vault/.files/myHosts.txt}"  
+  local line_num="${3:-1}" 
+  # Check if the file exists
+  if [[ ! -f $ip_file ]]; then
+    echo "Error: IP address file not found at $ip_file"
+    return 1
+  fi
+
+  # Get the IP from the specified line
+  local ip=$(sed -n "${line_num}p" "$ip_file")
+
+  # Validate that we got a valid IP
+  if [[ -z $ip ]]; then
+    echo "Error: No IP found at line $line_num in $ip_file"
+    return 1
+  fi
+
+  # Connect via SSH
+  ssh alexj@$ip -p "$port" -i ~/.ssh/capricorn-server
+}
 
 # Look for a specific word
 fzf_highlight() {
