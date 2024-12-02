@@ -15,7 +15,7 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","","custom/github","custom/chatgpt","custom/r_end","custom/padd"],
+	"modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/padd"],
 	"modules-center": ["custom/padd","custom/l_end","cpu","memory","custom/r_end","custom/padd"],
 	"modules-right": ["custom/padd","custom/l_end","pulseaudio","pulseaudio#microphone","battery","","custom/cliphist","idle_inhibitor","clock","custom/r_end","custom/padd"],
 
@@ -35,16 +35,6 @@
         }
     },
 
-        "custom/github": {
-            "format": " ",
-            "on-click": " brave --app=https://github.com",
-            "tooltip": false
-        },
-        "custom/chatgpt": {
-            "format": " {}",
-            "on-click": " brave --app=https://chatgpt.com/",
-            "tooltip": false
-        },
     "cpu": {
         "interval": 10,
         "format": "󰍛 {usage}%",
