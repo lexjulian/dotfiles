@@ -64,6 +64,7 @@ print_row "systemctl list-units --type=service --state=running" "Shows all the a
 print_row "xrandr -q" "Shows all info about monitors."
 print_row "xrandr --output HDMI-1 --same-as eDP-1" "Will duplicate your main monitor to your second monitor. ${RED}Note:${NC} If you are using Polybar, the statusbar will be on top of each other. Comment the for loop in .config/polybar/launch_polybar.sh."
 print_row "yay -Scc" "Will clean the yay package cache and AUR."
+print_row "yt-dlp -x --audio-format mp3 <URL>" "convert yt videos to mp3 and download them on the current directory"
 
 # Print a separator line at the end
 echo -e "${BLUE}$(printf '%*s' "$total_width" | tr ' ' '-')${NC}"
