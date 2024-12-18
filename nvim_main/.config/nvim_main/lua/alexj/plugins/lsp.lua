@@ -2,6 +2,13 @@ return {
     {
         "williamboman/mason.nvim",
         lazy = false,
+        opts = {
+            ensure_installed = {
+                "black", -- need manual install
+                "mypy",  -- need manual install
+            },
+            auto_install = true,
+        },
         config = function()
             require("mason").setup()
         end,
@@ -17,6 +24,8 @@ return {
                 "ts_ls", -- JavaScript/TypeScript
                 "emmet_ls", -- Emmet for HTML/CSS
                 "gopls", -- Go
+                "pyright",
+                "ruff",
             },
             auto_install = true,
         },
@@ -38,6 +47,11 @@ return {
                         },
                     },
                 },
+            })
+
+            -- Python
+            lspconfig.pyright.setup({
+                capabilities = capabilities,
             })
 
             -- Go
