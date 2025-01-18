@@ -6,9 +6,7 @@ return {
   dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",
-
   },
-
 
    opts = {
   workspaces = {
