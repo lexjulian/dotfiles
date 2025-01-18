@@ -8,7 +8,7 @@
 #       ```
 #       */5 * * * * ~/.config/scripts/check_battery.sh >> ~/.config/scripts/logfile.log 2>&1
 #       ```
-
+BATTERY_STATUS=$(cat /sys/class/power_supply/BAT0/status)
 # Define your battery preference
 BATTERY_LOW=20
 BATTERY_FULL=97
@@ -27,12 +27,17 @@ fi
 
 # Ensure the variable contains a valid number
 if [[ -n "$BATTERY_PERCENTAGE" && "$BATTERY_PERCENTAGE" =~ ^[0-9]+$ ]]; then
-    if [ "$BATTERY_PERCENTAGE" -lt $BATTERY_LOW ]; then
+    if [ "$BATTERY_PERCENTAGE" -lt $BATTERY_LOW ] && [ "$BATTERY_STATUS" = "Discharging" ]; then
         env DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus" /usr/bin/dunstify "Warning: Battery almost empty (${BATTERY_PERCENTAGE}%). Please charge your device." -u critical
         echo "Battery Almost Empty - $DATE_TIME"
-    elif [ "$BATTERY_PERCENTAGE" -gt $BATTERY_FULL ]; then
+        XDG_RUNTIME_DIR="/run/user/1000" paplay ~/Personal/lowbat.mp3
+        #paplay ~/Personal/lowbat.mp3
+    elif [ "$BATTERY_PERCENTAGE" -gt $BATTERY_FULL ] && [ "$BATTERY_STATUS" = "Full" ]; then
         env DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus" /usr/bin/dunstify "Battery almost charge (${BATTERY_PERCENTAGE}%)" -u normal -t 30000
         echo "Battery Full - $DATE_TIME"
+        XDG_RUNTIME_DIR="/run/user/1000" paplay ~/Personal/fullcharge.mp3 
+        #DISPLAY=:0 paplay ~/Personal/fullcharge.mp3
+        paplay ~/Personal/fullcharge.mp3
     fi
 else
     echo "Failed to retrieve battery percentage. Please check your system settings. - $DATE_TIME"
