@@ -4,7 +4,7 @@ OPTION=$1
 
 function control_volume(){
     CURRENT_VOLUME=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+%' | head -1)
-    dunstify -u low -r 9991 -h int:value:"$CURRENT_VOLUME" "Volume: ${CURRENT_VOLUME}" -t 2000
+    dunstify -u low 9991 -h int:value:"$CURRENT_VOLUME" "Volume: ${CURRENT_VOLUME}" -t 2000
 }
 
 case "$OPTION" in 
