@@ -1,7 +1,7 @@
 #!/bin/bash
 
 standard_note(){
-    file_name=$(echo "$STANDARD_FILE" | tr ' ' '-')
+    file_name=$(echo "$STANDARD_FILE")
     formatted_file_name=$(date "+%Y-%m-%d")_${file_name}.md
     cd ${OBSIDIAN_PATH} || exit
     touch "${OBSIDIAN_PATH}/09 - Temp/Draft/${formatted_file_name}"
